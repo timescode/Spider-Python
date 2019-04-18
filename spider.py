@@ -2,10 +2,7 @@
 import urllib2
 import urllib
 import time
-import thread
-import socket
 from urllib import urlencode
-socket.setdefaulttimeout(90)
 
 #get url content
 def getURLContents(host_server, url):
@@ -39,8 +36,8 @@ def postURLContents(url,paramDict):
 
 
 def testGet():
-	hostSever = "the host"
-	hostUrl = "the host"+"the url"
+	hostServer = "www.baidu.com"
+	hostUrl = "http://www.baidu.com"
 	result = getURLContents(hostServer,hostUrl)
 	print result
 

@@ -15,7 +15,6 @@ def getURLContents(host_server, url):
 	'User-Agent': 'Apache-HttpClient/UNAVAILABLE (java 1.4)', 
 	'Host': host_server, 
 	'Connection': 'Keep-Alive'}
-
 	reg = urllib2.Request(url, headers = header)
 	con = urllib2.urlopen(reg)
 	doc = con.read()
@@ -30,7 +29,6 @@ def postURLContents(url,paramDict):
 	'Content-Length': '2',
 	'User-Agent': 'Apache-HttpClient/UNAVAILABLE (java 1.4)', 
 	'Connection': 'Keep-Alive'}
-	
 	params = urllib.urlencode(paramDict)
 	reg = urllib2.Request(url, params, headers = header)
 	response = urllib2.urlopen(reg)
